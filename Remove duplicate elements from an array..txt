@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    int n=10;
+    int arr[10]={20,12,65,23,20,45,67,33,23,67};
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]==arr[j]){
+                  
+                  for(int k=j;k<n-1;k++){
+                      arr[k]=arr[k+1];
+                  }
+                  n--;
+                  j--;
+            }
+        }
+    }
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
